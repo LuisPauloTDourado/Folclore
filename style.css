@@ -1,16 +1,21 @@
+
 * {
     padding: 0;
     margin: 0;
 }
+
 body {
     font-family: sans-serif;
     text-align: center;
     background-color: #e2e2e2;
 }
 
+
 img {
     border-radius: 15px;
+    max-width: 100%; 
 }
+
 
 .titulo {
     background-color: #333;
@@ -18,12 +23,13 @@ img {
     padding: 20px;
 }
 
+
 p {
     margin: 20px 15px;
 }
 
 li {
-    margin: 10px 23em;
+    margin: 10px 29em; 
 }
 
 footer {
@@ -35,6 +41,7 @@ footer {
 a {
     color: white;  
     margin: 0 10px;
+    text-decoration: none; 
 }
 
 a:hover {
@@ -45,12 +52,54 @@ a:hover {
     padding: 3px;
     background-color: #333;
     color: white;
-    
 }
 
 .card {
     background-color: white;
     padding: 20px;
-    margin: 15px 10em;
+    margin: 15px auto; 
     border-radius: 15px;
+    max-width: 90%; 
+}
+
+.saci {
+    height: auto; 
+    width: 400px; 
+    height: 400px;
+}
+
+@media (max-width: 768px) {
+    .titulo {
+        padding: 15px;
+    }
+    
+    .link {
+        display: flex;
+        flex-direction: column; /* Torna o menu vertical em telas pequenas */
+        align-items: center;
+    }
+    
+    .card {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    li {
+        margin: 10px 0; /* Remove a margem lateral */
+    }
+}
+
+@media (max-width: 480px) {
+    .titulo {
+        font-size: 1.5em; /* Reduz o tamanho da fonte do título em telas muito pequenas */
+    }
+
+    .card {
+        margin: 5px;
+        padding: 10px;
+    }
+
+    .link a {
+        margin: 5px 0; /* Ajusta a margem dos links para telas pequenas */
+    }
 }
